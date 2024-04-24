@@ -28,7 +28,6 @@ export default function Register() {
                     }
                 ).then((result) => {
                     const data = result.data
-                    console.log(result)
                     if(data.resultCode.startsWith('S-')) {
                         router.push('/')
                     } else {
