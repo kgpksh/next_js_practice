@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head/>
-      <body className="m-10">
+      <body className="flex flex-col p-10 items-center h-screen">
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
           <Header/>
-          {children}
+          <main className="flex flex-col m-10 items-center justify-center h-full w-full">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
