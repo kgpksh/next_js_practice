@@ -9,6 +9,7 @@ const authStore = create(
         (set, get) => ({
             accessToken : null,
             refreshToken : null,
+            getAccessToken: () => get().accessToken,
             async jwtLogin(username, password) {
                 try {
                     const result = await axios.post(loginUrl, {
@@ -41,7 +42,6 @@ const authStore = create(
           }),
           {
             name: 'auth-storage',
-            // storage: createJSONStorage(() => sessionStorage)
           }
     )
 )

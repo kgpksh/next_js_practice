@@ -14,7 +14,6 @@ export default function Register() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        console.log(isJwtLoggedIn())
         if (isJwtLoggedIn()) {
             router.push('/');
         } else {
